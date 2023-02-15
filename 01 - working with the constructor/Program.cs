@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,8 @@ namespace _01___working_with_the_constructor
     {
         static void Main(string[] args)
         {
-            Player[] players = { new Player("PlayerOne", 100, 50, 10, 5), new Player("PlayerTwo", 70, 60, 15, 7) };
+            Player[] players = { new Player("PlayerOne", 100, 50, 10, 5), 
+                new Player("PlayerTwo", 70, 60, 15, 7) };
 
             for (int i = 0; i < players.Length; i++)
             {
@@ -21,24 +22,24 @@ namespace _01___working_with_the_constructor
 
     class Player
     {
-        private string _gamerName;
-        private int _gamerHealth;
-        private int _gamerStamina;
-        private int _gamerDamage;
-        private int _gamerArmore;
+        private string _name;
+        private int _health;
+        private int _stamina;
+        private int _damage;
+        private int _armore;
 
-        public Player(string gamerName, int gamerHealth, int gamerStamina, int gamerDamage, int gamerArmore)
+        public Player(string name, int health, int stamina, int damage, int armore)
         {
-            _gamerName = gamerName;
-            _gamerHealth = gamerHealth;
-            _gamerStamina = gamerStamina;
-            _gamerDamage = gamerDamage;
-            _gamerArmore = gamerArmore;
+            _name = name;
+            _health = health;
+            _stamina = stamina;
+            _damage = damage;
+            _armore = armore;
         } 
         
         public void ShowInformation()
         {
-            Console.WriteLine($"Игрок:{_gamerName}, Здровье:{_gamerHealth}, Выносливость: {_gamerStamina}, Урон: {_gamerDamage}, Броня: {_gamerArmore}");
+            Console.WriteLine($"Игрок:{_name}, Здровье:{_health}, Выносливость: {_stamina}, Урон: {_damage}, Броня: {_armore}");
         }
     }
 }
